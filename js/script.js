@@ -43,12 +43,14 @@ const ourTeam = [
 // Seleziono un container e creo la variabile card
 let container = document.getElementById('container')
 let card
-
 // Scorro l'array e per ogni elemento (oggetto) creo un div 
 // Il div lo popolo con le informazioni contenute nello'oggetto
 for (let i = 0; i < ourTeam.length; i++){
     let thisWorker = ourTeam[i]
+    // Creo un elemento del DOM nel quale inserisco la card
     card = document.createElement('div')
     container.append(card)
-    card.innerHTML += thisWorker.name + ' ' + thisWorker.role + ' ' + thisWorker.img
+    // La card viene popolata dall'immagine (come immagine)
+    // e dalle stringe di role e name
+    card.innerHTML += `<img src="img 2/${thisWorker.img}"> ${thisWorker.name} ${thisWorker.role}`
 }
