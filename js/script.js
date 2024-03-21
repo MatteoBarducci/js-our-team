@@ -6,6 +6,7 @@
 // BONUS 1: Trasformare la stringa foto in una immagine effettiva
 // BONUS 2: Organizzare i singoli membri in card/schede
 
+// Creo un array di oggetti
 const ourTeam = [
     {
         name: 'Wayne Barnett',
@@ -39,9 +40,15 @@ const ourTeam = [
     },
 ]
 
+// Seleziono un container e creo la variabile card
+let container = document.getElementById('container')
+let card
+
+// Scorro l'array e per ogni elemento (oggetto) creo un div 
+// Il div lo popolo con le informazioni contenute nello'oggetto
 for (let i = 0; i < ourTeam.length; i++){
     let thisWorker = ourTeam[i]
-    console.log(thisWorker.name)
-    console.log(thisWorker.role)
-    console.log(thisWorker.img)
+    card = document.createElement('div')
+    container.append(card)
+    card.innerHTML += thisWorker.name + ' ' + thisWorker.role + ' ' + thisWorker.img
 }
