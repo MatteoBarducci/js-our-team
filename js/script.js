@@ -38,3 +38,10 @@ const ourTeam = [
         img: 'barbara-ramos-graphic-designer.jpg'
     },
 ]
+
+for (let i = 0; i < ourTeam.length; i++){
+    let thisWorker = ourTeam[i]
+    console.log(thisWorker.name)
+    console.log(thisWorker.role)
+    console.log(thisWorker.img)
+}
