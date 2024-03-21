@@ -52,5 +52,5 @@ for (let i = 0; i < ourTeam.length; i++){
     container.append(card)
     // La card viene popolata dall'immagine (come immagine)
     // e dalle stringe di role e name
-    card.innerHTML += `<img src="img 2/${thisWorker.img}"> ${thisWorker.name} ${thisWorker.role}`
+    card.innerHTML += `<img src="img 2/${thisWorker.img}"><span>${thisWorker.name} ${thisWorker.role}</span>`
 }
